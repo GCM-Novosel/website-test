@@ -1,5 +1,5 @@
 FROM nginx:latest
-RUN addgroup -S nonroot // adduser -S nonroot -G nonroot
+RUN addgroup -S nonroot && adduser -S nonroot -G nonroot
 USER nonroot
 COPY index.html /usr/share/nginx/html
 COPY logoimage.png /usr/share/nginx/html
